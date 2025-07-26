@@ -1,0 +1,99 @@
+GET /api/weather
+Request:
+
+At mention
+GET /api/weather
+Response:
+
+json
+At mention
+{
+  "weather": "sunny",
+  "temperature": 30,
+  "humidity": 65,
+  "location": "Chennai"
+}
+---------------------------------------------------------------------
+2. GET /api/medical/:userId
+Request:
+
+At mention
+GET /api/medical/user123
+Success Response (user exists):
+
+json
+At mention
+{
+  "userId": "user123",
+  "conditions": ["diabetes", "hypertension"],
+  "updatedAt": "2025-07-26T14:45:00.000Z"
+}
+Success Response (user doesn't exist):
+
+json
+At mention
+{
+  "userId": "user123",
+  "conditions": []
+}
+
+--------------------------------------------------------------------------
+3. POST /api/medical/:userId
+Request:
+
+At mention
+POST /api/medical/user123
+Headers: {
+  "Content-Type": "application/json"
+}
+Body:
+json
+At mention
+{
+  "conditions": ["diabetes", "hypertension"]
+}
+Success Response:
+
+json
+At mention
+{
+  "userId": "user123",
+  "conditions": ["diabetes", "hypertension"],
+  "updatedAt": "2025-07-26T14:45:00.000Z"
+}
+
+-------------------------------------------------------------------------
+4. POST /api/recommend
+Request:
+
+POST /api/recommend
+Headers: {
+  "Content-Type": "application/json"
+}
+Body:
+json
+{
+  "userId": "user123",
+  "latitude": 12.9716,
+  "longitude": 77.5946
+}
+Success Response:
+
+json
+{
+  "recommendations": [
+    {
+      "meal": "Breakfast",
+      "food": "Oatmeal with berries",
+      "calories": 300,
+      "reason": "Low glycemic index, good for diabetes"
+    },
+    {
+      "meal": "Lunch",
+      "food": "Grilled chicken salad",
+      "calories": 450,
+      "reason": "High protein, low carb"
+    }
+  ],
+  "weatherConsiderations": "Hot weather - staying hydrated is important"
+}
