@@ -1,4 +1,4 @@
-# 🥗 Smart Food Recommendation API (NutriClime)
+# 🥗 Smart Food Recommendation API (NutriGuide-AI)
 
 This is the backend of the **Smart Food Choice Application**, developed for the **Samsung Solve for Tomorrow Hackathon**. The app helps users make better food choices by recommending meals based on:
 
@@ -28,7 +28,7 @@ This is the backend of the **Smart Food Choice Application**, developed for the 
    The app uses:
    - Medical conditions
    - Weather data  
-   to generate healthy food options (optionally powered by an AI like **Gemini API**).
+   to generate healthy food options (powered by AI - **Gemini API**).
 
 ---
 
